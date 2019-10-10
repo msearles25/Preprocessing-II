@@ -7,21 +7,35 @@ nav {
     border-bottom: 2px dashed @navigation-border;
     padding: 2% 0;
 
-    h1{
-        width:15%;
+    @media @mobile {
+        flex-direction: column;
     }
 
-    .links {
-        text-decoration: none;
-        width: 30%;
-        display: flex;
-        justify-content: space-around;
-
-            a {
-                text-decoration: none;
-                color: @shark;
-                font-size: 1.8rem;
+        h1{
+            width:15%;
+            
+            @media @mobile {
+                width: 100%;
+                text-align: center;
             }
-    }
+        }
+
+        .links {
+            text-decoration: none;
+            width: 30%;
+            display: flex;
+            justify-content: space-around;
+
+            @media @mobile {
+                width: 100%;
+                margin: 2% 0 0 0;
+            }
+
+                a {
+                    text-decoration: none;
+                    color: @shark;
+                    font-size: 1.8rem;
+                }
+        }
 }
 

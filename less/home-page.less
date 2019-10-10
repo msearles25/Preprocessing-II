@@ -1,5 +1,11 @@
+
 .home {
 
+  @media @mobile {
+    width: 90%;
+    margin: 0 auto;
+  }
+  
   header {
     border-bottom: 2px dashed @navigation-border;
 
@@ -14,19 +20,35 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-   
+    @media @mobile {
+      flex-direction: column;
+      padding: 0 5%;
+    }
+    
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 100%;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 100%;
+        }
       }
     }
   }
@@ -34,6 +56,12 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+
+    @media @mobile {
+      flex-direction: column-reverse;
+    }
+
+    
 
     .text-content {
       padding-left: 1%;
@@ -50,6 +78,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -61,9 +93,29 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      width: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
+
+      @media @mobile {
+        
+        width: 80%;
+      }
+    }
+
+    .btn {
+      .customBtn(80%, 1.8rem, @button-bg, @main-bg);
+
+      @media @mobile {
+        width: 100%;
+        padding: 3%;
+      }
     }
   }
 }// home
