@@ -237,8 +237,8 @@ nav .links a {
 }
 @media (max-width: 500px) {
   .home .content-section {
+    width: 100%;
     flex-direction: column;
-    padding: 0 5%;
   }
 }
 .home .content-section .text-content {
