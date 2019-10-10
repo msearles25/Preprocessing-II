@@ -1,0 +1,48 @@
+// Mixin parametric
+
+.specialAnim(@colorOne, @colorTwo, @colorThree) {
+    @keyframes colorChange{
+        0%{
+            color: @colorOne;
+        }
+        50%{
+            color: @colorTwo;
+        }
+        100% {
+            color: @colorThree;
+        }
+    }
+    @keyframes spinning {
+        from {
+            transform: rotate(0deg);
+        }
+        to{
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes blowUp {
+        0% {
+            font-size: 30px;
+        }
+        50% {
+            font-size: 50px;
+        }
+        100%{
+            font-size: 30px;
+        }
+    }
+    animation: blowUp 3s infinite, spinning 3s infinite, colorChange 3s infinite;
+}
+
+// Other
+
+.animationBox{
+    text-align: center;
+    margin: 25% 0;
+}
+.animationBox p{
+    font-size: 30px;
+
+    .specialAnim(red, green, blue)
+}

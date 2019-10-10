@@ -178,7 +178,7 @@ nav {
   border-bottom: 2px dashed #C0C0C0;
   padding: 20px 0;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   nav {
     justify-content: space-evenly;
   }
@@ -191,7 +191,7 @@ nav {
 nav h1 {
   width: 200px;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   nav h1 {
     width: 30%;
   }
@@ -209,9 +209,9 @@ nav .links {
   display: flex;
   justify-content: space-around;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   nav .links {
-    width: 50%;
+    width: 60%;
   }
 }
 @media (max-width: 500px) {
@@ -236,7 +236,7 @@ nav .links a {
   font-size: 1.6rem;
   padding: 20px;
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   .home {
     width: 90%;
     margin: 0 auto;
@@ -357,5 +357,43 @@ nav .links a {
   .home .content-pick .btn {
     width: 100%;
     padding: 3%;
+  }
+}
+.animationBox {
+  text-align: center;
+  margin: 25% 0;
+}
+.animationBox p {
+  font-size: 30px;
+  animation: blowUp 3s infinite, spinning 3s infinite, colorChange 3s infinite;
+}
+@keyframes colorChange {
+  0% {
+    color: red;
+  }
+  50% {
+    color: green;
+  }
+  100% {
+    color: blue;
+  }
+}
+@keyframes spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes blowUp {
+  0% {
+    font-size: 30px;
+  }
+  50% {
+    font-size: 50px;
+  }
+  100% {
+    font-size: 30px;
   }
 }
